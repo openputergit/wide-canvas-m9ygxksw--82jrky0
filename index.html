@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAI Assistant - Your Learning Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#EFF6FF'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .chat-button {
+            transition: transform 0.3s ease;
+        }
+        .chat-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-inter">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-primary">EduAI</a>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <div class="dropdown relative">
+                    <button class="px-4 py-2 hover:text-primary">Curate Test</button>
+                    <div class="dropdown-content hidden absolute bg-white shadow-lg rounded-lg w-48">
+                        <a href="#" class="block px-4 py-2 hover:bg-secondary">Create New Test</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-secondary">My Tests</a>
+                    </div>
+                </div>
+                <div class="dropdown relative">
+                    <button class="px-4 py-2 hover:text-primary">Global Search</button>
+                    <div class="dropdown-content hidden absolute bg-white shadow-lg rounded-lg w-48">
+                        <a href="#" class="block px-4 py-2 hover:bg-secondary">Resources</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-secondary">Tests</a>
+                    </div>
+                </div>
+                <div class="dropdown relative">
+                    <button class="px-4 py-2 hover:text-primary">Pathway</button>
+                    <div class="dropdown-content hidden absolute bg-white shadow-lg rounded-lg w-48">
+                        <a href="#" class="block px-4 py-2 hover:bg-secondary">Learning Paths</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-secondary">My Progress</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+                <select class="px-2 py-1 rounded border hover:border-primary">
+                    <option>English</option>
+                    <option>Español</option>
+                    <option>Français</option>
+                </select>
+                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Login/Signup</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Transform Your Learning Journey with AI</h1>
+            <p class="text-xl text-gray-600 mb-8">Personalized education assistant that adapts to your learning style</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition">Get Started</button>
+                <button class="bg-white text-primary px-8 py-3 rounded-lg border border-primary hover:bg-gray-50 transition">Explore Without Login</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <i class="bi bi-clipboard-data text-4xl text-primary"></i>
+                    <h3 class="text-xl font-semibold mt-4">Personalized Tests</h3>
+                    <p class="text-gray-600 mt-2">AI-generated tests tailored to your knowledge level and learning goals</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <i class="bi bi-search text-4xl text-primary"></i>
+                    <h3 class="text-xl font-semibold mt-4">Resource Search</h3>
+                    <p class="text-gray-600 mt-2">Find the perfect learning materials instantly with our smart search</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <i class="bi bi-diagram-3 text-4xl text-primary"></i>
+                    <h3 class="text-xl font-semibold mt-4">AI Learning Pathways</h3>
+                    <p class="text-gray-600 mt-2">Custom learning journeys designed for your specific goals</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <i class="bi bi-chat-dots text-4xl text-primary"></i>
+                    <h3 class="text-xl font-semibold mt-4">AI Chat Assistant</h3>
+                    <p class="text-gray-600 mt-2">24/7 support for your learning queries and guidance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">How does the AI personalization work?</summary>
+                    <p class="mt-2 text-gray-600">Our AI analyzes your learning patterns, preferences, and performance to create a tailored learning experience that adapts in real-time.</p>
+                </details>
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">Is there a free trial available?</summary>
+                    <p class="mt-2 text-gray-600">Yes! You can explore basic features without logging in, and we offer a 14-day free trial for full access.</p>
+                </details>
+                <details class="bg-white rounded-lg p-4">
+                    <summary class="font-semibold cursor-pointer">What subjects are covered?</summary>
+                    <p class="mt-2 text-gray-600">We cover a wide range of subjects including Mathematics, Sciences, Languages, and Professional Skills.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Button -->
+    <button class="chat-button fixed bottom-6 left-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition z-50">
+        <i class="bi bi-chat-dots-fill text-2xl"></i>
+        <span class="ml-2">Help Me!</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm text-gray-600">
+                    © 2023 EduAI Assistant. All rights reserved.
+                </div>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-600 hover:text-primary">About Us</a>
+                    <a href="#" class="text-gray-600 hover:text-primary">Contact</a>
+                    <a href="#" class="text-gray-600 hover:text-primary">Terms</a>
+                    <a href="#" class="text-gray-600 hover:text-primary">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
